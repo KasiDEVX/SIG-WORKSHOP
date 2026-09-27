@@ -12,7 +12,7 @@ This repository provides clean, modular, and well-documented C++ Arduino sketche
 
 ## Included Sketches
 
-### 1. Basic LED Blink (`1.ino`)
+### 1. Basic LED Blink (`1.LED_Blink.ino`)
 - **Objective**: Introduce basic digital output interfacing, GPIO configuration, and microcontroller timing.
 - **Behavior**: Drives a GPIO pin to alternate between digital HIGH and LOW states at a 1000 ms periodic interval, cycling an LED on and off.
 - **Key Concepts**:
@@ -20,7 +20,7 @@ This repository provides clean, modular, and well-documented C++ Arduino sketche
   - Digital state driving (`HIGH` / `LOW`)
   - Blocking execution timing (`delay`)
 
-### 2. Push Button Toggle with Software Debounce (`2.ino`)
+### 2. Push Button Toggle with Software Debounce (`2.Push_Button.ino`)
 - **Objective**: Read physical momentary switch inputs reliably without false triggers from mechanical contact bounce.
 - **Behavior**: Toggles the LED power state each time the user presses a momentary push button. Subsequent presses switch the LED between active and inactive states.
 - **Key Concepts**:
@@ -29,7 +29,7 @@ This repository provides clean, modular, and well-documented C++ Arduino sketche
   - Mechanical noise filtering with a 50 ms debounce window
   - State edge detection (triggering specifically on the falling edge / press transition)
 
-### 3. Analog Read (`3.ino`)
+### 3. Analog Read (`3.Analog_Read.ino`)
 - **Objective**: Measure continuous analog electrical signals using the microcontroller's onboard Analog-to-Digital Converter (ADC).
 - **Behavior**: Reads the variable voltage produced by a potentiometer divider, converts the digital quantization levels into real-world voltage values, and logs the measurements over the Serial connection.
 - **Key Concepts**:
@@ -38,7 +38,7 @@ This repository provides clean, modular, and well-documented C++ Arduino sketche
   - Voltage conversion math based on operating reference voltage
   - Serial monitor telemetry transmission (`Serial.begin`, `Serial.print`)
 
-### 4. PWM Fade (`4.ino`)
+### 4. PWM Fade (`4.PWM_Fade.ino`)
 - **Objective**: Simulate variable analog output voltage using digital Pulse Width Modulation (PWM) to control actuator intensity.
 - **Behavior**: Smoothly increases and decreases an LED's perceived brightness from fully dark to full luminosity in a continuous breathing loop.
 - **Key Concepts**:
@@ -136,7 +136,7 @@ Standard microcontrollers lack native Digital-to-Analog Converters (DAC) on most
 
 ## Getting Started in Arduino IDE
 
-1. **Open the Project**: Launch the Arduino IDE desktop application and open any desired experiment sketch (`1.ino`, `2.ino`, `3.ino`, or `4.ino`).
+1. **Open the Project**: Launch the Arduino IDE desktop application and open any desired experiment sketch (`1.LED_Blink.ino`, `2.Push_Button.ino`, `3.Analog_Read.ino`, or `4.PWM_Fade.ino`).
 2. **Select Board**: Navigate through the top application menu to **Tools** > **Board** and choose your connected microcontroller model.
 3. **Select Communication Port**: Under **Tools** > **Port**, highlight the serial communication port assigned to your plugged-in development board.
 4. **Compile and Flash**: Click the **Verify** checkmark icon to validate the code, followed by the **Upload** arrow icon to transfer the binary firmware onto the target board.
